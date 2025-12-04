@@ -21,10 +21,10 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="font-sans text-gray-900 min-h-screen flex flex-col">
+<body class="font-sans text-gray-900 min-h-screen flex flex-col pt-20">
 
     <!-- HEADER -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white shadow-sm fixed top-0 left-0 w-full z-[999]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <a href="index.html" class="flex items-center group">
@@ -34,16 +34,16 @@
                     </div>
                 </a>
                 <nav class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-sm font-bold uppercase tracking-wide text-gray-600 hover:text-primary transition-colors">Home</a>
-                    <a href="about.html" class="text-sm font-bold uppercase tracking-wide text-primary transition-colors">About Us</a>
-                    <a href="contact.html" class="text-sm font-bold uppercase tracking-wide text-gray-600 hover:text-primary transition-colors">Contact</a>
+                    <a href="index.html" class="text-sm font-bold uppercase tracking-wide text-gray-600 hover:text-primary transition-colors py-2">Home</a>
+                    <a href="about.html" class="text-sm font-bold uppercase tracking-wide text-primary transition-colors py-2">About Us</a>
+                    <a href="contact.html" class="text-sm font-bold uppercase tracking-wide text-gray-600 hover:text-primary transition-colors py-2">Contact</a>
                 </nav>
                 <div class="md:hidden">
                     <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none"><i data-lucide="menu" class="w-6 h-6"></i></button>
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg z-[1000]">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="index.html" class="block px-3 py-4 rounded-md text-base font-bold text-gray-600 hover:text-primary hover:bg-gray-50">Home</a>
                 <a href="about.html" class="block px-3 py-4 rounded-md text-base font-bold text-primary bg-blue-50">About Us</a>
@@ -164,8 +164,8 @@
         </div>
     </main>
 
-    <!-- FOOTER (Same as Index) -->
-    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800 relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <div>
@@ -173,13 +173,15 @@
                         <span class="font-serif text-2xl font-bold text-white leading-none">American Finance</span>
                         <span class="font-sans text-xs font-bold text-primary tracking-[0.2em] uppercase">Corp</span>
                     </a>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Empowering financial independence through comprehensive insurance solutions and agent development.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Empowering financial independence through comprehensive insurance solutions and agent development. We build legacies that last generations.</p>
                 </div>
                 <div>
                     <h3 class="text-lg font-bold text-white mb-6 border-b-2 border-gray-700 pb-2 inline-block">Core Products</h3>
                     <ul class="space-y-3">
-                         <li><a href="https://thinksmartinsurance.com/iul-2" target="_blank" class="text-gray-400 hover:text-primary transition-colors text-sm flex items-center"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>IUL Secrets</a></li>
+                        <li><a href="https://thinksmartinsurance.com/iul-2" target="_blank" class="text-gray-400 hover:text-primary transition-colors text-sm flex items-center"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>IUL Secrets</a></li>
                         <li><a href="https://thinksmartinsurance.com" target="_blank" class="text-gray-400 hover:text-primary transition-colors text-sm flex items-center"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>Millionaire Baby</a></li>
+                        <li><a href="https://thinksmartinsurance.com" target="_blank" class="text-gray-400 hover:text-primary transition-colors text-sm flex items-center"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>Term-Life</a></li>
+                        <li><a href="https://thinksmartinsurance.com/max-funded-iul-secrets-2" target="_blank" class="text-gray-400 hover:text-primary transition-colors text-sm flex items-center"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>Max-Funded IUL</a></li>
                     </ul>
                 </div>
                 <div>
@@ -188,17 +190,33 @@
                         <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Home</a></li>
                         <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors text-sm">About Us</a></li>
                         <li><a href="contact.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Contact</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Careers</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-bold text-white mb-6 border-b-2 border-gray-700 pb-2 inline-block">Contact Us</h3>
                     <ul class="space-y-4">
-                        <li class="flex items-start"><i data-lucide="phone" class="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0"></i><a href="tel:+16787223447" class="text-gray-300 hover:text-white transition-colors font-medium">+1 678-722-3447</a></li>
-                        <li class="flex items-start"><i data-lucide="mail" class="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0"></i><a href="mailto:support@americanfinancialcorp.org" class="text-gray-300 hover:text-white transition-colors text-sm break-all">support@americanfinancialcorp.org</a></li>
+                        <li class="flex items-start">
+                            <i data-lucide="phone" class="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0"></i>
+                            <div class="flex flex-col">
+                                <a href="tel:+16787223447" class="text-gray-300 hover:text-white transition-colors font-medium">+1 678-722-3447</a>
+                                <span class="text-xs text-gray-500">Mon-Fri 9am-5pm EST</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="mail" class="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0"></i>
+                            <a href="mailto:support@americanfinancialcorp.org" class="text-gray-300 hover:text-white transition-colors text-sm break-all">support@americanfinancialcorp.org</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0"></i>
+                            <span class="text-gray-400 text-sm">Nationwide Service, United States</span>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 mt-8 text-center"><p class="text-gray-500 text-sm">&copy; 2024 American Finance Corp. All rights reserved.</p></div>
+            <div class="border-t border-gray-800 pt-8 mt-8 text-center">
+                <p class="text-gray-500 text-sm">&copy; 2024 American Finance Corp. All rights reserved.</p>
+            </div>
         </div>
     </footer>
     <script>
