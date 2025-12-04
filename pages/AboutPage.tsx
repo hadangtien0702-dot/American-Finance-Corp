@@ -1,6 +1,6 @@
+
 import React from 'react';
 import { Shield, Target, Users, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const AboutPage: React.FC = () => {
   return (
@@ -133,9 +133,9 @@ const AboutPage: React.FC = () => {
                 Whether you need protection for your family or are looking for a lucrative career change, we are here to guide you every step of the way.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Link to="/contact" className="inline-flex items-center justify-center bg-white text-primary font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg w-full sm:w-auto">
+                  <a href="/contact" className="inline-flex items-center justify-center bg-white text-primary font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg w-full sm:w-auto">
                     Contact Us Today
-                  </Link>
+                  </a>
               </div>
             </div>
         </div>

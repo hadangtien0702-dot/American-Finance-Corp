@@ -1,3 +1,1 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* This file is no longer used. Styles are handled by Tailwind CDN in the HTML files. */

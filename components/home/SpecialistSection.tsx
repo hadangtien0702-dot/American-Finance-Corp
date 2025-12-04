@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { ShieldCheck } from 'lucide-react';
 
 const SpecialistSection: React.FC = () => {
@@ -41,10 +40,10 @@ const SpecialistSection: React.FC = () => {
               Whether you are a business owner looking to protect your assets or an individual seeking tax-advantaged retirement growth, our specialists design custom solutions tailored to your unique situation.
             </p>
             
-            <Link to="/about" className="group inline-flex items-center text-primary font-bold text-lg hover:text-blue-700 transition-colors">
+            <a href="/about" className="group inline-flex items-center text-primary font-bold text-lg hover:text-blue-700 transition-colors">
               Learn more about our approach
               <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
-            </Link>
+            </a>
           </div>
 
         </div>

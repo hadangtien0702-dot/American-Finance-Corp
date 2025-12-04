@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { siteConfig } from '../data/config';
 
 const Footer: React.FC = () => {
@@ -13,10 +12,10 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Column */}
           <div>
-             <Link to="/" className="flex flex-col mb-4 group">
+             <a href="/" className="flex flex-col mb-4 group">
                 <span className="font-serif text-2xl font-bold text-white leading-none">American Finance</span>
                 <span className="font-sans text-xs font-bold text-primary tracking-[0.2em] uppercase">Corp</span>
-             </Link>
+             </a>
              <p className="text-gray-400 text-sm leading-relaxed mb-6">
                Empowering financial independence through comprehensive insurance solutions and agent development. We build legacies that last generations.
              </p>
@@ -43,13 +42,13 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {siteConfig.menuItems.map((item) => (
                 <li key={item.path}>
-                  <Link to={item.path} className="text-gray-400 hover:text-primary transition-colors text-sm">
+                  <a href={item.path} className="text-gray-400 hover:text-primary transition-colors text-sm">
                     {item.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
               <li>
-                <Link to="/contact" className="text-gray-400 hover:text-primary transition-colors text-sm">Careers</Link>
+                <a href="/contact" className="text-gray-400 hover:text-primary transition-colors text-sm">Careers</a>
               </li>
             </ul>
           </div>

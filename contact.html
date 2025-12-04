@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - American Finance Corp</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#1383c6' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Georgia', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-gray-900 min-h-screen flex flex-col">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center group">
+                    <div class="flex flex-col">
+                        <span class="font-serif text-2xl font-bold text-gray-900 leading-none group-hover:text-primary transition-colors">American Finance</span>
+                        <span class="font-sans text-xs font-bold text-primary tracking-[0.2em] uppercase">Corp</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-sm font-bold uppercase tracking-wide text-gray-600 hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="text-sm font-bold uppercase tracking-wide text-gray-600 hover:text-primary transition-colors">About Us</a>
+                    <a href="contact.html" class="text-sm font-bold uppercase tracking-wide text-primary transition-colors">Contact</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none"><i data-lucide="menu" class="w-6 h-6"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-4 rounded-md text-base font-bold text-gray-600 hover:text-primary hover:bg-gray-50">Home</a>
+                <a href="about.html" class="block px-3 py-4 rounded-md text-base font-bold text-gray-600 hover:text-primary hover:bg-gray-50">About Us</a>
+                <a href="contact.html" class="block px-3 py-4 rounded-md text-base font-bold text-primary bg-blue-50">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow bg-white">
+        <!-- Header Section -->
+        <div class="bg-primary py-16 md:py-20 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
+                <h1 class="text-3xl md:text-5xl font-extrabold mb-4 md:mb-6 tracking-tight">Contact Us</h1>
+                <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed font-light">
+                    Ready to secure your future or join our elite team? We are here to answer your questions and guide you to success.
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-20">
+                
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100 relative order-2 lg:order-1">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Send us a Message</h2>
+                    <p class="text-gray-500 mb-6 text-sm">Fill out the form below and we'll get back to you within 24 hours.</p>
+                    <form class="space-y-5" onsubmit="event.preventDefault(); alert('Message sent! We will contact you shortly.');">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="firstName" class="block text-sm font-semibold text-gray-700 mb-1">First Name</label>
+                                <input type="text" id="firstName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 focus:bg-white" placeholder="John">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-semibold text-gray-700 mb-1">Last Name</label>
+                                <input type="text" id="lastName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 focus:bg-white" placeholder="Doe">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 focus:bg-white" placeholder="john@example.com">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-semibold text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 focus:bg-white" placeholder="(555) 123-4567">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-semibold text-gray-700 mb-1">Subject</label>
+                            <div class="relative">
+                                <select id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 focus:bg-white appearance-none text-gray-700">
+                                    <option>General Inquiry</option>
+                                    <option>Agent Recruitment / Careers</option>
+                                    <option>Life Insurance Quote</option>
+                                    <option>Partnership Opportunities</option>
+                                </select>
+                                <i data-lucide="chevron-down" class="absolute right-3 top-3.5 h-5 w-5 text-gray-400 pointer-events-none"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 focus:bg-white" placeholder="How can we help you today?"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white font-bold py-4 px-6 rounded-lg hover:bg-blue-600 transition-colors flex items-center justify-center gap-2 shadow-lg transform hover:-translate-y-0.5">
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="flex flex-col justify-start space-y-6 md:space-y-8 order-1 lg:order-2">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Get in Touch</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                            Whether you are looking for insurance coverage or interested in a career opportunity, our team is ready to assist you.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-start gap-5 hover:border-primary/30 transition-colors group">
+                        <div class="bg-blue-50 p-3 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-colors flex-shrink-0">
+                            <i data-lucide="phone" class="w-6 h-6"></i>
+                        </div>
+                        <div class="min-w-0">
+                            <h3 class="font-bold text-gray-900 mb-1 text-lg">Phone</h3>
+                            <p class="text-gray-500 mb-2 text-sm">Mon-Fri from 9am to 5pm.</p>
+                            <a href="tel:+16787223447" class="text-primary font-bold text-lg md:text-xl hover:underline block truncate">+1 678-722-3447</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-start gap-5 hover:border-primary/30 transition-colors group">
+                        <div class="bg-blue-50 p-3 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-colors flex-shrink-0">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </div>
+                        <div class="min-w-0">
+                            <h3 class="font-bold text-gray-900 mb-1 text-lg">Email</h3>
+                            <p class="text-gray-500 mb-2 text-sm">Our friendly team is here to help.</p>
+                            <a href="mailto:support@americanfinancialcorp.org" class="text-primary font-bold text-base md:text-lg hover:underline break-all">support@americanfinancialcorp.org</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-start gap-5 hover:border-primary/30 transition-colors group">
+                        <div class="bg-blue-50 p-3 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-colors flex-shrink-0">
+                            <i data-lucide="clock" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-1 text-lg">Business Hours</h3>
+                            <p class="text-gray-500 text-sm">Monday - Friday</p>
+                            <p class="text-gray-800 font-bold">Mon-Fri 9am-5pm EST</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-blue-50 to-white p-6 rounded-xl border border-blue-100">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <h3 class="font-bold text-gray-900">Serving Nationwide</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            We are licensed and actively serving families and agents across the United States. Contact us to find a representative near you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="border-t border-gray-200 pt-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
+                    <p class="text-gray-500 mt-4">Common questions about our services and careers.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                    <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                        <div class="flex gap-4">
+                            <i data-lucide="help-circle" class="w-6 h-6 text-primary flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg mb-2">How do I become an agent?</h4>
+                                <p class="text-gray-600 leading-relaxed">Simply fill out the form above selecting "Agent Recruitment" as the subject. One of our hiring managers will reach out to discuss the licensing process and training.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                        <div class="flex gap-4">
+                            <i data-lucide="help-circle" class="w-6 h-6 text-primary flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg mb-2">Do you offer training for new agents?</h4>
+                                <p class="text-gray-600 leading-relaxed">Yes! We provide a comprehensive training program including online courses, mentorship from top producers, and weekly sales training calls.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more FAQs if needed -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER (Same as Index) -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="index.html" class="flex flex-col mb-4 group">
+                        <span class="font-serif text-2xl font-bold text-white leading-none">American Finance</span>
+                        <span class="font-sans text-xs font-bold text-primary tracking-[0.2em] uppercase">Corp</span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Empowering financial independence through comprehensive insurance solutions and agent development.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6 border-b-2 border-gray-700 pb-2 inline-block">Core Products</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://thinksmartinsurance.com/iul-2" target="_blank" class="text-gray-400 hover:text-primary transition-colors text-sm flex items-center"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>IUL Secrets</a></li>
+                        <li><a href="https://thinksmartinsurance.com" target="_blank" class="text-gray-400 hover:text-primary transition-colors text-sm flex items-center"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>Millionaire Baby</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6 border-b-2 border-gray-700 pb-2 inline-block">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors text-sm">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6 border-b-2 border-gray-700 pb-2 inline-block">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start"><i data-lucide="phone" class="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0"></i><a href="tel:+16787223447" class="text-gray-300 hover:text-white transition-colors font-medium">+1 678-722-3447</a></li>
+                        <li class="flex items-start"><i data-lucide="mail" class="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0"></i><a href="mailto:support@americanfinancialcorp.org" class="text-gray-300 hover:text-white transition-colors text-sm break-all">support@americanfinancialcorp.org</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 mt-8 text-center"><p class="text-gray-500 text-sm">&copy; 2024 American Finance Corp. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    </script>
+</body>
+</html>

@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const HeroSection: React.FC = () => {
   return (
@@ -33,13 +32,13 @@ const HeroSection: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-full text-white bg-primary hover:bg-blue-600 transition-all shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1">
+            <a href="/contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-full text-white bg-primary hover:bg-blue-600 transition-all shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1">
               Start Your Career
               <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link to="/about" className="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-full text-white border border-slate-600 hover:bg-slate-800 transition-all hover:border-slate-500">
+            </a>
+            <a href="/about" className="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-full text-white border border-slate-600 hover:bg-slate-800 transition-all hover:border-slate-500">
               Explore Our Services
-            </Link>
+            </a>
           </div>
 
           <div className="mt-10 flex items-center gap-6 text-sm text-slate-400 font-medium">
